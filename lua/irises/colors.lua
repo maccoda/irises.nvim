@@ -15,8 +15,7 @@ return {
   ochre_yellow = "#F6AA1C",
   -- sky_accent = "#B1E5F2",
   sky_accent = "#9bddee",
-  dust_olive = "#88846F",
-  -- rust_orange = "#ae4e00", --Good
+  dust_olive = "#aea36d",
   rust_orange = "#ae6600", -- Good also
   deep_purple = "#8E6BAF",
   carmine_red = "#D33F49",

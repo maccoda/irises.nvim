@@ -22,6 +22,7 @@ local groups = {
   Pmenu = { bg = colors.bg1, fg = colors.fg1 },
   PmenuMatch = { bg = colors.bg1, fg = colors.fresh_green },
   PmenuSbar = { bg = colors.bg2 },
+  PmenuSel = { bg = colors.selection, bold = true },
   PmenuKind = { bg = colors.bg1, fg = colors.fg1 },
   PmenuThumb = { bg = colors.dust_olive },
   Substitute = { bg = colors.violet, fg = colors.fg0 },
@@ -354,7 +355,7 @@ end
 
 Irises.reload = function()
   package.loaded["irises"] = nil
-  require("nvim.lua.irises.init").load()
+  require("irises.init").load()
 end
 
 return Irises
