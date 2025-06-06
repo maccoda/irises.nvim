@@ -17,7 +17,9 @@ local groups = {
   Include = { fg = colors.rust_orange, bold = true },
   LineNr = { fg = colors.fg2, bg = colors.bg0 },
   Normal = { fg = colors.fg0, bg = colors.bg0 },
-  NormalFloat = { fg = colors.fg0, bg = colors.bg2 },
+  NormalFloat = { fg = colors.fg1, bg = colors.bg3 },
+  -- FloatBorder = { fg = colors.fg1, bg = colors.bg3 },
+  -- FloatTitle = { fg = c.border_highlight, bg = c.bg_float },
   NormalNC = { fg = colors.fg0, bg = colors.bg0 },
   Pmenu = { bg = colors.bg1, fg = colors.fg1 },
   PmenuMatch = { bg = colors.bg1, fg = colors.fresh_green },
@@ -29,7 +31,7 @@ local groups = {
   Search = { bg = colors.selection, fg = colors.fg0 },
   StatusLine = { bg = colors.bg2 },
   StatusLineNC = { bg = colors.bg3 },
-  Visual = { bg = colors.bg3 },
+  Visual = { bg = colors.selection },
   VisualNOS = { link = "Visual" },
   WinBar = { link = "StatusLine" },
   WinBarNC = { link = "StatusLineNC" },
@@ -40,8 +42,8 @@ local groups = {
   -- CursorIM = { fg = c.bg, bg = c.fg },
   -- CursorColumn = { bg = c.bg_highlight },
   Directory = { fg = colors.iris_blue },
-  DiffAdd = { bg = colors.dark_green },
-  DiffDelete = { bg = colors.carmine_red },
+  DiffAdd = { bg = colors.diff.add, fg = colors.fg1 },
+  DiffDelete = { bg = colors.diff.delete, fg = colors.bg3 },
   -- DiffText = { bg = c.diff.text },
   ErrorMsg = { fg = colors.carmine_red },
   -- VertSplit = { fg = c.border },
@@ -56,8 +58,6 @@ local groups = {
   -- MoreMsg = { fg = c.blue },
   NonText = { fg = colors.bg1 },
   -- NormalSB = { fg = c.fg_sidebar, bg = c.bg_sidebar },
-  -- FloatBorder = { fg = c.border_highlight, bg = c.bg_float },
-  -- FloatTitle = { fg = c.border_highlight, bg = c.bg_float },
   -- PmenuMatchSel = { bg = Util.blend_bg(c.fg_gutter, 0.8), fg = c.blue1 },
   -- Question = { fg = c.blue }, -- |hit-enter| prompt and yes/no questions
   QuickFixLine = { bg = colors.selection, bold = true },
@@ -316,7 +316,6 @@ local groups = {
   BlinkCmpKindTypeParameter = { link = "@lsp.type.typeParameter" },
   BlinkCmpKindVariable = { link = "@variable" },
   BlinkCmpKindValue = { link = "@string" },
-  BlinkCmpSignatureHelpBorder = { fg = colors.fg1, bg = colors.bg2 },
 
   -- Snacks: Dashboard
   SnacksDashboardDesc = { fg = colors.fg0 },
@@ -333,10 +332,11 @@ local groups = {
 }
 
 -- TODO: git commit messages
+-- TODO: Markdown rendering of titles looks wrong
 
 Irises.load = function()
   if vim.version().minor < 8 then
-    vim.notify_once("colors.nvim: you must use neovim 0.8 or higher")
+    vim.notify_once("irises.nvim: you must use neovim 0.8 or higher")
     return
   end
 

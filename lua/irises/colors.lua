@@ -5,7 +5,7 @@ return {
   bg3 = "#3b382e",
   fg0 = "#EAE3D2", -- Parchment
   fg1 = "#fae4ab",
-  fg2 = "#a09486",
+  fg2 = "#afa599",
   cursor = "#AACCFF", -- Sky blue
   selection = "#4A5060", -- Muted violet
 
@@ -13,13 +13,15 @@ return {
   violet = "#735DA5",
   fresh_green = "#C2D94C",
   ochre_yellow = "#F6AA1C",
-  -- sky_accent = "#B1E5F2",
   sky_accent = "#9bddee",
   dust_olive = "#aea36d",
-  rust_orange = "#ae6600", -- Good also
+  rust_orange = "#ae6600",
   deep_purple = "#8E6BAF",
   carmine_red = "#D33F49",
   iris_blue = "#7e98d1",
   comment = "#869189",
-  dark_green = "#6b7e0f",
+  diff = {
+    add = "#59622c",
+    delete = "#b36066",
+  },
 }
