@@ -4,6 +4,8 @@ A theme inspired by Irises, the plant and Van Gogh's painting.
 
 Supports tree sitter and semantic highlighting.
 
+[![Screenshot](https://i.postimg.cc/0NKTWrxp/Screenshot-From-2025-06-07-20-26-49.png)](https://postimg.cc/CZYrdhR1)
+
 ## Installing
 
 ### Lazy
