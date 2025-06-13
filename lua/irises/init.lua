@@ -15,9 +15,9 @@ local groups = {
   EndOfBuffer = { fg = colors.bg0 },
   Folded = { bg = colors.bg0, italic = true },
   Include = { fg = colors.rust_orange, bold = true },
-  LineNr = { fg = colors.fg2, bg = colors.bg0 },
+  LineNr = { fg = colors.fg2 },
   Normal = { fg = colors.fg0, bg = colors.bg0 },
-  NormalFloat = { fg = colors.fg1, bg = colors.bg3 },
+  NormalFloat = { fg = colors.fg2, bg = colors.bg2 },
   -- FloatBorder = { fg = colors.fg1, bg = colors.bg3 },
   -- FloatTitle = { fg = c.border_highlight, bg = c.bg_float },
   NormalNC = { fg = colors.fg0, bg = colors.bg0 },
@@ -330,9 +330,6 @@ local groups = {
   GitSignsChange = { fg = colors.iris_blue },
   GitSignsDelete = { fg = colors.carmine_red },
 }
-
--- TODO: git commit messages
--- TODO: Markdown rendering of titles looks wrong
 
 Irises.load = function()
   if vim.version().minor < 8 then
