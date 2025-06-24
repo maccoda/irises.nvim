@@ -122,7 +122,7 @@ local groups = {
   DiagnosticUnderlineWarn = { undercurl = true, sp = colors.ochre_yellow },
   DiagnosticInfo = { fg = colors.iris_blue },
   DiagnosticSignInfo = { fg = colors.iris_blue },
-  DiagnosticUnderlineInfo = { fg = colors.iris_blue, undercurl = true },
+  DiagnosticUnderlineInfo = { sp = colors.iris_blue, undercurl = true },
   DiagnosticHint = { fg = colors.dust_olive },
   DiagnosticSignHint = { fg = colors.dust_olive },
   DiagnosticUnderlineHint = { sp = colors.dust_olive, undercurl = true },
