@@ -21,7 +21,7 @@ return {
   iris_blue = "#7e98d1",
   comment = "#869189",
   diff = {
-    add = "#59622c",
-    delete = "#b36066",
+    add = "#474f1c",
+    delete = "#6c2b2f",
   },
 }

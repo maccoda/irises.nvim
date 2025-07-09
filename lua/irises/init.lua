@@ -46,7 +46,7 @@ local groups = {
   DiffDelete = { bg = colors.diff.delete, fg = colors.bg3 },
   -- DiffText = { bg = c.diff.text },
   ErrorMsg = { fg = colors.carmine_red },
-  -- VertSplit = { fg = c.border },
+  -- VertSplit = { fg = colors.fg1 },
   -- FoldColumn = { bg = opts.transparent and c.none or c.bg, fg = c.comment },
   -- SignColumn = { bg = opts.transparent and c.none or c.bg, fg = c.fg_gutter },
   -- SignColumnSB = { bg = c.bg_sidebar, fg = c.fg_gutter },
@@ -280,6 +280,10 @@ local groups = {
   ["@lsp.type.typeParameter"] = { link = "@type.definition" },
   ["@lsp.type.variable"] = { link = "@variable" },
 
+  -- Fish shell TS
+  fishParameter = { link = "@variable" },
+  fishOption = { link = "@variable" },
+
   -- Kinds were copied from tokyonight for the linking idea
   BlinkCmpKindArray = { link = "@punctuation.bracket" },
   BlinkCmpKindBoolean = { link = "@boolean" },
@@ -329,6 +333,9 @@ local groups = {
   GitSignsAdd = { fg = colors.fresh_green },
   GitSignsChange = { fg = colors.iris_blue },
   GitSignsDelete = { fg = colors.carmine_red },
+
+  -- Flash.nvim
+  FlashPrompt = { bg = colors.bg2 },
 }
 
 Irises.load = function()
