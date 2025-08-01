@@ -6,6 +6,7 @@ return {
   fg0 = "#EAE3D2", -- Parchment
   fg1 = "#fae4ab",
   fg2 = "#afa599",
+  fg3 = "#5b5957",
   cursor = "#AACCFF", -- Sky blue
   selection = "#4A5060", -- Muted violet
 
