@@ -64,6 +64,7 @@ local groups = {
   IncSearch = { bg = colors.rust_orange, fg = colors.fg0 },
   CurSearch = { link = "IncSearch" },
   -- SpecialKey = { fg = c.dark3 },
+  SnippetTabStop = { bg = colors.bg3 },
   SpellBad = { sp = colors.carmine_red, undercurl = true },
   SpellCap = { sp = colors.ochre_yellow, undercurl = true },
   SpellLocal = { sp = colors.dust_olive, undercurl = true },
