@@ -23,6 +23,6 @@ return {
   comment = "#869189",
   diff = {
     add = "#474f1c",
-    delete = "#6c2b2f",
+    delete = "#c07176",
   },
 }

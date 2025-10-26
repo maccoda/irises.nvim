@@ -1,6 +1,6 @@
 # irises.nvim
 
-A theme inspired by Irises, the plant and Van Gogh's painting.
+A theme inspired by irises, the plant and Van Gogh's painting.
 
 Supports tree sitter and semantic highlighting.
 
@@ -15,18 +15,10 @@ Supports tree sitter and semantic highlighting.
   "maccoda/irises.nvim",
   lazy = false,
   priority = 1000,
-  opts = {},
+  config = function()
+    vim.cmd.colorscheme 'irises'
+  end,
 }
-```
-
-## Usage
-
-```vim
-colorscheme irises
-```
-
-```lua
-vim.cmd([[colorscheme irises]])
 ```
 
 ## Supported plugins

@@ -21,8 +21,8 @@ local groups = {
   -- FloatBorder = { fg = colors.fg1, bg = colors.bg3 },
   -- FloatTitle = { fg = c.border_highlight, bg = c.bg_float },
   NormalNC = { fg = colors.fg0, bg = colors.bg0 },
-  Pmenu = { bg = colors.bg1, fg = colors.fg1 },
-  PmenuMatch = { bg = colors.bg1, fg = colors.fresh_green },
+  Pmenu = { bg = colors.bg1, fg = colors.fg2 },
+  PmenuMatch = { bg = colors.bg1, fg = colors.fg0 },
   PmenuSbar = { bg = colors.bg2 },
   PmenuSel = { bg = colors.selection, bold = true },
   PmenuKind = { bg = colors.bg1, fg = colors.fg1 },
@@ -43,8 +43,9 @@ local groups = {
   -- CursorColumn = { bg = c.bg_highlight },
   Directory = { fg = colors.iris_blue },
   DiffAdd = { bg = colors.diff.add, fg = colors.fg1 },
-  DiffDelete = { bg = colors.diff.delete, fg = colors.bg3 },
-  -- DiffText = { bg = c.diff.text },
+  DiffDelete = { bg = colors.diff.delete, fg = colors.fg1 },
+  DiffText = { bg = colors.bg1 },
+  DiffChange = { bg = colors.bg2 },
   ErrorMsg = { fg = colors.carmine_red },
   -- VertSplit = { fg = colors.fg1 },
   -- FoldColumn = { bg = opts.transparent and c.none or c.bg, fg = c.comment },
@@ -58,7 +59,6 @@ local groups = {
   -- MoreMsg = { fg = c.blue },
   NonText = { fg = colors.bg3 },
   -- NormalSB = { fg = c.fg_sidebar, bg = c.bg_sidebar },
-  -- PmenuMatchSel = { bg = Util.blend_bg(c.fg_gutter, 0.8), fg = c.blue1 },
   -- Question = { fg = c.blue }, -- |hit-enter| prompt and yes/no questions
   QuickFixLine = { bg = colors.selection, bold = true },
   IncSearch = { bg = colors.rust_orange, fg = colors.fg0 },
@@ -72,10 +72,10 @@ local groups = {
   TabLine = { bg = colors.bg1, fg = colors.fg2 },
   TabLineFill = { bg = colors.bg1 },
   TabLineSel = { fg = colors.cursor, bg = colors.bg2 },
-  -- Title = { fg = c.blue, bold = true },
+  Title = { fg = colors.iris_blue, bold = true },
   WarningMsg = { fg = colors.ochre_yellow },
   Whitespace = { fg = colors.fg2 },
-  -- WildMenu = { bg = c.bg_visual },
+  WildMenu = { link = "IncSearch" },
 
   Bold = { bold = true, fg = colors.fg0 },
   Character = { fg = colors.fresh_green },
@@ -285,7 +285,16 @@ local groups = {
   fishParameter = { link = "@variable" },
   fishOption = { link = "@variable" },
 
-  -- Kinds were copied from tokyonight for the linking idea
+  -- Typescript TS
+  typescriptParens = { link = "@punctuation.bracket" },
+  typescriptImport = { link = "@keyword.import" },
+  typescriptExport = { link = "@keyword.import" },
+  typescriptUnaryOp = { link = "@operator" },
+  typescriptBraces = { link = "@punctuation.bracket" },
+
+  -- Blink
+  BlinkCmpLabelMatch = { link = "PmenuMatch" },
+
   BlinkCmpKindArray = { link = "@punctuation.bracket" },
   BlinkCmpKindBoolean = { link = "@boolean" },
   BlinkCmpKindCodeium = { fg = colors.sky_accent, bg = colors.none },
@@ -365,6 +374,9 @@ local groups = {
   -- set_default_hl('MiniTablineTabpagesection', { link = 'Search' })
   -- set_default_hl('MiniTablineFill', { link = 'Normal' })
   -- set_default_hl('MiniTablineTrunc', { link = 'MiniTablineHidden' })
+  MiniTablineVisible = { link = "TabLine" },
+  MiniTablineModifiedCurrent = { link = "TabLineSel" },
+  MiniStarterFooter = { fg = colors.comment },
 }
 
 Irises.load = function()
