@@ -281,17 +281,6 @@ local groups = {
   ["@lsp.type.typeParameter"] = { link = "@type.definition" },
   ["@lsp.type.variable"] = { link = "@variable" },
 
-  -- Fish shell TS
-  fishParameter = { link = "@variable" },
-  fishOption = { link = "@variable" },
-
-  -- Typescript TS
-  typescriptParens = { link = "@punctuation.bracket" },
-  typescriptImport = { link = "@keyword.import" },
-  typescriptExport = { link = "@keyword.import" },
-  typescriptUnaryOp = { link = "@operator" },
-  typescriptBraces = { link = "@punctuation.bracket" },
-
   -- Blink
   BlinkCmpLabelMatch = { link = "PmenuMatch" },
 
@@ -353,27 +342,6 @@ local groups = {
   -- The current highlight groups are really jarring
 
   -- TODO: Mini tabline
-  --   * `MiniTablineCurrent` - buffer is current (has cursor in it).
-  -- * `MiniTablineVisible` - buffer is visible (displayed in some window).
-  -- * `MiniTablineHidden` - buffer is hidden (not displayed).
-  -- * `MiniTablineModifiedCurrent` - buffer is modified and current.
-  -- * `MiniTablineModifiedVisible` - buffer is modified and visible.
-  -- * `MiniTablineModifiedHidden` - buffer is modified and hidden.
-  -- * `MiniTablineFill` - unused right space of tabline.
-  -- * `MiniTablineTabpagesection` - section with tabpage information.
-  -- * `MiniTablineTrunc` - truncation symbols indicating more left/right tabs.
-  --
-  --   set_default_hl('MiniTablineCurrent', { link = 'TabLineSel' })
-  -- set_default_hl('MiniTablineVisible', { link = 'TabLineSel' })
-  -- set_default_hl('MiniTablineHidden',  { link = 'TabLine' })
-  --
-  -- set_default_hl('MiniTablineModifiedCurrent', { link = 'StatusLine' })
-  -- set_default_hl('MiniTablineModifiedVisible', { link = 'StatusLine' })
-  -- set_default_hl('MiniTablineModifiedHidden',  { link = 'StatusLineNC' })
-  --
-  -- set_default_hl('MiniTablineTabpagesection', { link = 'Search' })
-  -- set_default_hl('MiniTablineFill', { link = 'Normal' })
-  -- set_default_hl('MiniTablineTrunc', { link = 'MiniTablineHidden' })
   MiniTablineVisible = { link = "TabLine" },
   MiniTablineModifiedCurrent = { link = "TabLineSel" },
   MiniStarterFooter = { fg = colors.comment },
