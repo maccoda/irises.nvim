@@ -345,6 +345,9 @@ local groups = {
   MiniTablineVisible = { link = "TabLine" },
   MiniTablineModifiedCurrent = { link = "TabLineSel" },
   MiniStarterFooter = { fg = colors.comment },
+  MiniStatuslineDevinfo = { bg = colors.bg2, fg = colors.fg2 },
+  MiniStatuslineFilename = { bg = colors.bg1, fg = colors.fg1 },
+  MiniStatuslineFileinfo = { link = "MiniStatuslineDevinfo" },
 }
 
 Irises.load = function()
