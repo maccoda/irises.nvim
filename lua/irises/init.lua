@@ -338,13 +338,21 @@ local groups = {
   -- Flash.nvim
   FlashPrompt = { bg = colors.bg2 },
 
+  -- Mini Tabine
   MiniTablineVisible = { link = "TabLine" },
   MiniTablineModifiedCurrent = { link = "TabLineSel" },
+  -- Mini Starter
   MiniStarterFooter = { fg = colors.comment },
+  -- Mini Statusline
   MiniStatuslineDevinfo = { bg = colors.bg2, fg = colors.fg2 },
   MiniStatuslineFilename = { bg = colors.bg2, fg = colors.fg1 },
   MiniStatuslineFileinfo = { link = "MiniStatuslineDevinfo" },
   MiniStatuslineInactive = { bg = colors.bg1, fg = colors.fg2 },
+  MiniStatuslineModeNormal = { bg = colors.fg2, fg = colors.bg1, bold = true },
+  MiniStatuslineModeInsert = { bg = colors.iris_blue, fg = colors.bg1, bold = true },
+  MiniStatuslineModeVisual = { bg = colors.fresh_green, fg = colors.bg1, bold = true },
+  MiniStatuslineModeReplace = { bg = colors.rust_orange, fg = colors.bg1, bold = true },
+  MiniStatuslineModeCommand = { bg = colors.ochre_yellow, fg = colors.bg1, bold = true },
 }
 
 Irises.load = function()
