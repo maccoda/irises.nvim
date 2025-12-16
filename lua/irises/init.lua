@@ -18,8 +18,8 @@ local groups = {
   LineNr = { fg = colors.fg2 },
   Normal = { fg = colors.fg0, bg = colors.bg0 },
   NormalFloat = { fg = colors.fg2, bg = colors.bg2 },
-  -- FloatBorder = { fg = colors.fg1, bg = colors.bg3 },
-  -- FloatTitle = { fg = c.border_highlight, bg = c.bg_float },
+  FloatBorder = { fg = colors.fg3, bg = colors.bg2 },
+  FloatTitle = { fg = colors.iris_blue, bg = colors.bg2 },
   NormalNC = { fg = colors.fg0, bg = colors.bg0 },
   Pmenu = { bg = colors.bg1, fg = colors.fg2 },
   PmenuMatch = { bg = colors.bg1, fg = colors.fg0 },
@@ -28,7 +28,7 @@ local groups = {
   PmenuKind = { bg = colors.bg1, fg = colors.fg1 },
   PmenuThumb = { bg = colors.dust_olive },
   Substitute = { bg = colors.violet, fg = colors.fg0 },
-  Search = { bg = colors.selection, fg = colors.fg0 },
+  Search = { bg = colors.fg3, fg = colors.fg0 },
   StatusLine = { bg = colors.bg2 },
   StatusLineNC = { bg = colors.bg1 },
   Visual = { bg = colors.selection },
@@ -56,7 +56,7 @@ local groups = {
   MatchParen = { fg = colors.fg0, bg = colors.selection },
   -- ModeMsg = { fg = c.fg_dark, bold = true },
   -- MsgArea = { fg = c.fg_dark },
-  -- MoreMsg = { fg = c.blue },
+  MoreMsg = { fg = colors.fg2 },
   NonText = { fg = colors.bg3 },
   -- NormalSB = { fg = c.fg_sidebar, bg = c.bg_sidebar },
   -- Question = { fg = c.blue }, -- |hit-enter| prompt and yes/no questions
@@ -80,7 +80,7 @@ local groups = {
   Bold = { bold = true, fg = colors.fg0 },
   Character = { fg = colors.fresh_green },
   Constant = { fg = colors.sky_accent },
-  -- Debug = { fg = c.orange },
+  Debug = { fg = colors.rust_orange },
   Delimiter = { link = "Special" },
   Error = { fg = colors.carmine_red },
   Function = { fg = colors.iris_blue, bold = true },
@@ -338,16 +338,13 @@ local groups = {
   -- Flash.nvim
   FlashPrompt = { bg = colors.bg2 },
 
-  -- TODO: Render markdown
-  -- The current highlight groups are really jarring
-
-  -- TODO: Mini tabline
   MiniTablineVisible = { link = "TabLine" },
   MiniTablineModifiedCurrent = { link = "TabLineSel" },
   MiniStarterFooter = { fg = colors.comment },
   MiniStatuslineDevinfo = { bg = colors.bg2, fg = colors.fg2 },
-  MiniStatuslineFilename = { bg = colors.bg1, fg = colors.fg1 },
+  MiniStatuslineFilename = { bg = colors.bg2, fg = colors.fg1 },
   MiniStatuslineFileinfo = { link = "MiniStatuslineDevinfo" },
+  MiniStatuslineInactive = { bg = colors.bg1, fg = colors.fg2 },
 }
 
 Irises.load = function()
