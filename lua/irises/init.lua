@@ -22,7 +22,7 @@ local groups = {
   FloatTitle = { fg = colors.iris_blue, bg = colors.bg2 },
   NormalNC = { fg = colors.fg0, bg = colors.bg0 },
   Pmenu = { bg = colors.bg1, fg = colors.fg2 },
-  PmenuMatch = { bg = colors.bg1, fg = colors.fg0 },
+  PmenuMatch = { fg = colors.fg0 },
   PmenuSbar = { bg = colors.bg2 },
   PmenuSel = { bg = colors.selection, bold = true },
   PmenuKind = { bg = colors.bg1, fg = colors.fg1 },
@@ -42,10 +42,10 @@ local groups = {
   -- CursorIM = { fg = c.bg, bg = c.fg },
   -- CursorColumn = { bg = c.bg_highlight },
   Directory = { fg = colors.iris_blue },
-  DiffAdd = { fg = colors.fresh_green },
-  DiffDelete = { fg = colors.carmine_red },
-  DiffText = { bg = colors.bg1 },
-  DiffChange = { bg = colors.bg2 },
+  DiffAdd = { bg = colors.diff_add },
+  DiffDelete = { bg = colors.diff_delete },
+  DiffText = { bg = colors.bg3 },
+  DiffChange = { bg = colors.bg1 },
   ErrorMsg = { fg = colors.carmine_red },
   -- VertSplit = { fg = colors.fg1 },
   -- FoldColumn = { bg = opts.transparent and c.none or c.bg, fg = c.comment },
@@ -356,27 +356,13 @@ local groups = {
 }
 
 Irises.load = function()
-  if vim.version().minor < 8 then
-    vim.notify_once("irises.nvim: you must use neovim 0.8 or higher")
-    return
-  end
-
-  -- reset colors
   vim.cmd.hi("clear")
-  if vim.g.colors_name then
-    vim.cmd.hi("clear")
-  end
   vim.g.colors_name = "irises"
   vim.o.termguicolors = true
 
   for group, settings in pairs(groups) do
     vim.api.nvim_set_hl(0, group, settings)
   end
-end
-
-Irises.reload = function()
-  package.loaded["irises"] = nil
-  require("irises.init").load()
 end
 
 return Irises

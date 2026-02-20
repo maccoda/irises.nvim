@@ -21,4 +21,8 @@ return {
   carmine_red = "#D33F49",
   iris_blue = "#7e98d1",
   comment = "#869189",
+
+  -- diff
+  diff_add = "#2B3328",
+  diff_delete = "#43242B",
 }
