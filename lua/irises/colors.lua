@@ -23,6 +23,9 @@ return {
   comment = "#869189",
 
   -- diff
-  diff_add = "#2B3328",
-  diff_delete = "#43242B",
+  diff_add_bg = "#2B3328",
+  diff_add_fg = "#4b7f4a",
+  diff_delete_bg = "#43242B",
+  diff_delete_fg = "#aa455d",
+  diff_change_fg = "#7aa2ff",
 }
