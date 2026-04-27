@@ -356,6 +356,27 @@ local groups = {
   MiniPickPrompt = { bg = colors.bg3, fg = colors.iris_blue },
 }
 
+local function configure_terminal()
+  vim.g.terminal_color_0 = colors.bg0 -- black
+  vim.g.terminal_color_1 = colors.diff_delete_fg -- red
+  vim.g.terminal_color_2 = colors.fresh_green -- green
+  vim.g.terminal_color_3 = colors.ochre_yellow -- yellow
+  vim.g.terminal_color_4 = colors.iris_blue -- blue
+  vim.g.terminal_color_5 = colors.deep_purple -- magenta
+  vim.g.terminal_color_6 = colors.sky_accent -- cyan
+  vim.g.terminal_color_7 = colors.fg0 -- white
+  vim.g.terminal_color_8 = colors.bg1 -- brblack
+  vim.g.terminal_color_9 = colors.carmine_red -- brred
+  vim.g.terminal_color_10 = colors.diff_add_fg -- brgreen
+  vim.g.terminal_color_11 = colors.diff_change_fg -- bryellow
+  vim.g.terminal_color_12 = colors.selection -- brblue
+  vim.g.terminal_color_13 = colors.violet -- brmagenta
+  vim.g.terminal_color_14 = colors.cursor -- brcyan
+  vim.g.terminal_color_15 = colors.fg1 -- brwhite
+  vim.g.terminal_color_background = colors.bg0
+  vim.g.terminal_color_foreground = colors.fg0
+end
+
 Irises.load = function()
   vim.cmd.hi("clear")
   vim.g.colors_name = "irises"
@@ -364,6 +385,8 @@ Irises.load = function()
   for group, settings in pairs(groups) do
     vim.api.nvim_set_hl(0, group, settings)
   end
+
+  configure_terminal()
 end
 
 return Irises
